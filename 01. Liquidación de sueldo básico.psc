@@ -1,4 +1,4 @@
-Algoritmo Liquidacion_Sueldo
+Algoritmo Liquidacion_Sueldo_Basico
 	Definir sueldoBaseValido, cargasValidas, movilizacion, colacion, gratificacion, totalHaberesImponibles, afp, salud, seguroCesantia, totalDescuentosLegales, asignacionFamiliar Como Real
 	Definir largoSueldoBase, largoCargas Como Entero
 	Definir sueldoBase, cargasFamiliares Como Cadena
@@ -12,8 +12,8 @@ Algoritmo Liquidacion_Sueldo
 		largoSueldoBase <- Longitud(sueldoBase)
 		esValorCorrecto <- Verdadero
 		
-		Si largoSueldoBase > 0 Entonces //Validación para que incluso ingresando un valor vacío (ENTER), vuelva a solicitar ingresar un monto
-			esValorCorrecto <- ValidaNumeros(sueldoBase, largoSueldoBase, esValorCorrecto) //Si retorna falso, siempre se repetira el ciclo, si no retorna Falso, se mantendrá Verdadero y terminará el ciclo
+		Si largoSueldoBase > 0 Entonces //Validaciï¿½n para que incluso ingresando un valor vacï¿½o (ENTER), vuelva a solicitar ingresar un monto
+			esValorCorrecto <- ValidaNumeros(sueldoBase, largoSueldoBase, esValorCorrecto) //Si retorna falso, siempre se repetira el ciclo, si no retorna Falso, se mantendrï¿½ Verdadero y terminarï¿½ el ciclo
 			Si esValorCorrecto = Verdadero Entonces
 				sueldoBaseValido <- ConvertirANumero(sueldoBase)
 				Si sueldoBaseValido < 460000 Entonces
@@ -81,18 +81,18 @@ Algoritmo Liquidacion_Sueldo
 	sueldoLiquido <- totalHaberes - totalDescuentosLegales
 	
 	Escribir ' Sueldo Base:        ', sueldoBaseValido
-	Escribir ' Gratificación:      ', gratificacion, '               ----------> 25 % conceptos gratificables'
+	Escribir ' Gratificaciï¿½n:      ', gratificacion, '               ----------> 25 % conceptos gratificables'
 	Escribir '      Total haberes imponibles    ', totalHaberesImponibles
-	Escribir ' Asignación familiar ', asignacionFamiliar
+	Escribir ' Asignaciï¿½n familiar ', asignacionFamiliar
 	Escribir ' movilizacion        ', movilizacion
-	Escribir ' colación            ', colacion
+	Escribir ' colaciï¿½n            ', colacion
 	Escribir '      Total haberes no imponibles ', totalHaberesNoImponibles
 	Escribir '      Total Haberes               ', totalHaberes
 	Escribir ' AFP                 ', afp
 	Escribir ' Salud               ', salud
-	Escribir ' Seguro de Cesantía  ', seguroCesantia, '               -----------> Contrato indefinido -> 0.6 % '
+	Escribir ' Seguro de Cesantï¿½a  ', seguroCesantia, '               -----------> Contrato indefinido -> 0.6 % '
 	Escribir ' Total descuentos legales         ', totalDescuentosLegales
-	Escribir ' El sueldo líquido es:            ', sueldoLiquido
+	Escribir ' El sueldo lï¿½quido es:            ', sueldoLiquido
 	
 FinAlgoritmo
 

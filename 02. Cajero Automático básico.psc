@@ -1,4 +1,4 @@
-Algoritmo Cajero_Automatico
+Algoritmo Cajero_Automatico_Basico
 	Definir rut Como Cadena
 
 	rut_digitado = ''
@@ -46,11 +46,11 @@ Funcion Validar_Pin(pin_inicial Por Referencia, pin_validado Por Referencia, pin
 	Escribir 'Por favor ingrese su PIN:'
 	Escribir ' _______'
 	Escribir '| 1 2 3 | Recuerde nunca compartir'
-	Escribir '| 4 5 6 | sus contraseñas'
+	Escribir '| 4 5 6 | sus contraseï¿½as'
 	Escribir '| 7 8 9 | por seguridad'
 	Escribir '| - 0 + | BANCO PATITO'
 	Escribir ' _______'
-	Escribir 'Por motivos de seguridad tiene máximo 3 intentos'
+	Escribir 'Por motivos de seguridad tiene mï¿½ximo 3 intentos'
 	Leer pin_digitado
 	Limpiar Pantalla
 	
@@ -62,13 +62,13 @@ Funcion Validar_Pin(pin_inicial Por Referencia, pin_validado Por Referencia, pin
 			pin_validado <- Falso
 			Si contador < 3 Entonces
 				Limpiar Pantalla
-				Escribir 'El PIN digitado es incorrecto, número de intentos: ', contador
+				Escribir 'El PIN digitado es incorrecto, nï¿½mero de intentos: ', contador
 				Escribir 'Por favor ingrese su PIN:'
 				Leer pin_digitado
 			SiNo
 				Limpiar Pantalla
-				Escribir 'ERROR! Alcanzó el número máximo de intentos: (', contador, ')'
-				Escribir 'Por favor intente más tarde'
+				Escribir 'ERROR! Alcanzï¿½ el nï¿½mero mï¿½ximo de intentos: (', contador, ')'
+				Escribir 'Por favor intente mï¿½s tarde'
 			FinSi
 		FinSi
 	Hasta que pin_validado == Verdadero O contador >= 3
@@ -86,7 +86,7 @@ SubProceso Construir_Menu(pin_inicial Por Referencia, pin_digitado Por Referenci
 		
 		Escribir 'Bienvenido: [' rut_digitado ']'
 		Escribir 'Su clave PIN Actual es: [' pin_inicial ']'
-		Escribir 'La clave ha sido validada con éxito'
+		Escribir 'La clave ha sido validada con ï¿½xito'
 		Escribir 'Por favor seleccione una de las siguientes opciones:'
 		Escribir ''
 		Escribir ' =================================================== '
@@ -145,23 +145,23 @@ SubProceso Construir_Menu(pin_inicial Por Referencia, pin_digitado Por Referenci
 						Voucher(seleccion_opcion, saldo_total, monto_abonado, monto_girado, pin_inicial, nuevo_pin_2)
 						pin_inicial <- nuevo_pin_2
 					SiNo
-						Escribir 'El nuevo PIN digitado no coincide ó es igual al PIN actual'
+						Escribir 'El nuevo PIN digitado no coincide ï¿½ es igual al PIN actual'
 					FinSi
 				FinSi
 			5: 
 				Limpiar Pantalla
-				Escribir 'La sesión ha sido finalizada con éxito'
+				Escribir 'La sesiï¿½n ha sido finalizada con ï¿½xito'
 				Escribir 'Hasta pronto ', rut_digitado
 				repetir_menu = 0
 			De otro modo:
 				Limpiar Pantalla
-				Escribir "Opción no válida"
+				Escribir "Opciï¿½n no vï¿½lida"
 		FinSegun
 		
 		Si (seleccion_opcion > 0 Y seleccion_opcion <= 4) O seleccion_opcion >= 6 Entonces
 			Escribir ''
 			Escribir ''
-			Escribir 'Para volver al Menú principal presione (1)'
+			Escribir 'Para volver al Menï¿½ principal presione (1)'
 			Escribir 'Para finalizar presione (0)'
 			Leer repetir_menu
 		FinSi
@@ -174,16 +174,16 @@ Funcion Voucher(seleccion_opcion, saldo_total, monto_abonado, monto_girado, pin_
 		1:
 			Limpiar Pantalla
 			Escribir ' ======== BANCO PATITO ========'
-			Escribir '| Código de transacción: BP', AZAR(500), 'FX'
-			Escribir '| Fecha de transacción: 30/06/2024'
+			Escribir '| Cï¿½digo de transacciï¿½n: BP', AZAR(500), 'FX'
+			Escribir '| Fecha de transacciï¿½n: 30/06/2024'
 			Escribir '| ======== VALOR CTA CTE ========'
 			Escribir '| Saldo Total: $', saldo_total
 			Escribir ' ======= FIN TRANSACCION ======='
 		2:
 			Limpiar Pantalla
 			Escribir ' ======== BANCO PATITO ========'
-			Escribir '| Código de transacción: BP', AZAR(500), 'FX'
-			Escribir '| Fecha de transacción: 30/06/2024'
+			Escribir '| Cï¿½digo de transacciï¿½n: BP', AZAR(500), 'FX'
+			Escribir '| Fecha de transacciï¿½n: 30/06/2024'
 			Escribir '| ======== ABONO CTA CTE ========'
 			Escribir '| Monto Abonado: $', monto_abonado
 			Escribir '| Saldo Total: $', saldo_total
@@ -191,8 +191,8 @@ Funcion Voucher(seleccion_opcion, saldo_total, monto_abonado, monto_girado, pin_
 		3:
 			Limpiar Pantalla
 			Escribir ' ======== BANCO PATITO ========'
-			Escribir '| Código de transacción: BP', AZAR(500), 'FX'
-			Escribir '| Fecha de transacción: 30/06/2024'
+			Escribir '| Cï¿½digo de transacciï¿½n: BP', AZAR(500), 'FX'
+			Escribir '| Fecha de transacciï¿½n: 30/06/2024'
 			Escribir '| ======== GIRO CTA CTE ========'
 			Escribir '| Monto Girado: $', monto_girado
 			Escribir '| Saldo Total: $', saldo_total
@@ -200,8 +200,8 @@ Funcion Voucher(seleccion_opcion, saldo_total, monto_abonado, monto_girado, pin_
 		4:
 			Limpiar Pantalla
 			Escribir ' ======== BANCO PATITO ========'
-			Escribir '| Código de transacción: BP', AZAR(500), 'FX'
-			Escribir '| Fecha de transacción: 30/06/2024'
+			Escribir '| Cï¿½digo de transacciï¿½n: BP', AZAR(500), 'FX'
+			Escribir '| Fecha de transacciï¿½n: 30/06/2024'
 			Escribir '| == CAMBIO DE PIN REALIZADO =='
 			Escribir '| PIN Anterior: ', pin_inicial
 			Escribir '| PIN Nuevo: ', nuevo_pin_2
