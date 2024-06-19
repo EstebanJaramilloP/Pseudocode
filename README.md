@@ -1,6 +1,6 @@
 # Pseudocódigo con PSEINT
 
-Ejercicios básicos para estudiar y prácticar programación con Pseudocódigo
+Ejercicios básicos de pseudocódigo, cuyo único objetivo es estudiar, analizar, aprender y prácticar con distintos desafíos
 
 ## Versión Pseint
 
